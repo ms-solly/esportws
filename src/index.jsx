@@ -22,7 +22,7 @@ const App = props => (
   </>
 );
 render(() => (
-  <Router >
+  <Router root={App}>
       <Route path="/" component={Home} />
       <Route path="/teams" component={Teams} />
       <Route path="/news" component={News_pg} />
