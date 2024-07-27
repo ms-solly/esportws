@@ -34,7 +34,7 @@ const MatchesPage = () => {
   };
 
   const SkeletonCard = () => (
-    <div class="bg-gray-800 rounded-lg shadow-md p-4 w-full animate-pulse m-2">
+    <div class="bg-gray-800 rounded-lg shadow-md p-4 w-full animate-pulse">
       <div class="flex justify-between items-center">
         <div class="h-6 bg-gray-700 rounded w-1/4"></div>
         <div class="h-6 bg-gray-700 rounded w-1/4"></div>
@@ -44,33 +44,38 @@ const MatchesPage = () => {
   );
 
   return (
-    <div class="container mx-auto px-4 py-8 bg-gray-900">
-      <h1 class="text-3xl font-bold mb-6 text-white">Live Matches</h1>
-      <div class="grid gap-4 md:grid-cols-2">
-        <For each={loading() ? Array(20).fill(null) : matches()}>
-          {(match, index) => (
-            loading() ? (
-              <SkeletonCard />
-            ) : (
-              <div class="bg-gray-800 rounded-lg shadow-md p-4 m-2 border border-gray-700">
-                <div class="flex justify-between items-center">
-                  <div class="text-red-700 font-bold animate-pulse "><span class='text-xl m-1 rounded-full'><BsWifi2 class=' inline-block'/></span>LIVE</div>
-                  <div class="text-gray-400 text-sm">ID: {match.id}</div>
-                </div>
-                <div class="mt-2 flex justify-between items-center">
-                  <div class="text-white font-bold">
-                    {match.radiantWin ? 'Radiant' : 'Dire'} Win
+    <div class="bg-gray-900 min-h-screen">
+      <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-white">Live Matches</h1>
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+          <For each={loading() ? Array(20).fill(null) : matches()}>
+            {(match, index) => (
+              loading() ? (
+                <SkeletonCard />
+              ) : (
+                <div class="bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700">
+                  <div class="flex justify-between items-center">
+                    <div class="text-red-700 font-bold animate-pulse flex items-center">
+                      <BsWifi2 class="mr-1 animate-ping" />
+                      <span> LIVE</span>
+                    </div>
+                    <div class="text-gray-400 text-xs">ID: {match.id}</div>
                   </div>
-                  <div class="text-gray-400 text-sm">{match.duration}</div>
+                  <div class="mt-2 flex justify-between items-center">
+                    <div class="text-white font-bold text-sm">
+                      {match.radiantWin ? 'Radiant' : 'Dire'} Win
+                    </div>
+                    <div class="text-gray-400 text-xs">{match.duration}</div>
+                  </div>
+                  <div class="mt-2 flex justify-between items-center text-xs text-gray-400">
+                    <div>Avg MMR: {match.avgMmr !== 'Unknown' ? match.avgMmr : 'Unknown'}</div>
+                    <div>Mode: {match.gameMode}</div>
+                  </div>
                 </div>
-                <div class="mt-2 flex justify-between items-center text-sm text-gray-400">
-                <div>Avg MMR: {match.avgMmr !== 'Unknown' ? match.avgMmr : 'Unknown'}</div>
-                <div>Mode: {match.gameMode}</div>
-              </div>
-              </div>
-            )
-          )}
-        </For>
+              )
+            )}
+          </For>
+        </div>
       </div>
     </div>
   );
