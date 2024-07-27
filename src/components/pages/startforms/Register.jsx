@@ -38,7 +38,7 @@ export default function Registration() {
               name="email"
               id="emailid"
               autoComplete="on"
-              class="w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2   " 
+              class="w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2 shadow-sm " 
               placeholder="Enter your E-mail"
             />
           </div>
@@ -53,7 +53,7 @@ export default function Registration() {
                 name="password"
                 id="password"
                 placeholder="Enter your Password"
-                class="w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2  "
+                class="w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2 shadow-sm  "
                 value={password()}
                 onInput={(e) => {
                   setPassword(e.target.value);
@@ -76,7 +76,7 @@ export default function Registration() {
                 name="c_password"
                 id="c_password"
                 placeholder="********"
-                class={`w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2   ${passwordsMatch() ? "" : "border-red-500"}`}
+                class={`w-full p-2  border-b-red-500  border-b-2   rounded font-thin text-sm  placeholder:none focus:outline-none focus:border-t-red-500 focus:border-b-0 focus:border-t-2 shadow-sm   ${passwordsMatch() ? "" : "border-red-500"}`}
                 value={confirmPassword()}
                 onInput={(e) => {
                   setConfirmPassword(e.target.value);
