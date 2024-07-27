@@ -5,7 +5,7 @@ import Teams from "../Teams";
 function Home() {
   return (
     <div>
-      <Header class="bg-black"/>
+     
       <Teams/>
       
     </div>

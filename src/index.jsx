@@ -17,7 +17,7 @@ const Home = lazy(() => import("./components/pages/Home"));
 
 const App = props => (
   <>
-  <Home/>
+  <Header/>
     {props.children}
   </>
 );
