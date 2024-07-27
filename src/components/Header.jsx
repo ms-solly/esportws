@@ -9,7 +9,7 @@ function Header() {
     <header class="bg-gray-800 p-4">
       <nav class="flex justify-between items-center">
         <div class="text-white font-extrabold text-2xl">
-          Dota 2<span class="animate-pulse text-red-500">&gt;&gt;</span>
+          <a href="/">Dota 2<span class="animate-pulse text-red-500">&gt;&gt;</span></a>
         </div>
         
         <div class="flex items-center">
