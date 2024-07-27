@@ -43,7 +43,6 @@ function Header() {
           <li><a href="/tournaments" class="block text-white hover:text-gray-200">Tournaments</a></li>
           <li><a href="/scores" class="block text-white hover:text-gray-200">Scores</a></li>
           <li><a href="/news" class="block text-white hover:text-gray-200">News</a></li>
-          <li><a href="/auth/register" class="inline-block md:inline-block text-white bg-gray-700 hover:bg-gray-600 rounded px-3 py-1 text-sm mt-2">Register</a></li>
         </ul>
       </div>
     </header>
