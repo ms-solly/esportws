@@ -38,11 +38,11 @@ function Header() {
 
       {/* Mobile and tablet menu */}
       <div class={`lg:hidden ${isMenuOpen() ? 'block' : 'hidden'}`}>
-        <ul class="mt-4 space-y-2">
-          <li><a href="/teams" class="block text-white hover:text-gray-200">Teams</a></li>
-          <li><a href="/tournaments" class="block text-white hover:text-gray-200">Tournaments</a></li>
-          <li><a href="/scores" class="block text-white hover:text-gray-200">Scores</a></li>
-          <li><a href="/news" class="block text-white hover:text-gray-200">News</a></li>
+        <ul class="mt-4 space-y-2 flex flex-col text-center">
+          <li><a href="/teams" class="block hover:bg-gray-900 p-3 hover:rounded border-transparent border-2 hover:border-gray-700 text-white hover:text-gray-200">Teams</a></li>
+          <li><a href="/tournaments" class="block hover:bg-gray-900 p-3 hover:rounded border-transparent border-2 hover:border-gray-700 text-white hover:text-gray-200">Tournaments</a></li>
+          <li><a href="/scores" class="block hover:bg-gray-900 p-3 hover:rounded border-transparent border-2 hover:border-gray-700 text-white hover:text-gray-200">Scores</a></li>
+          <li><a href="/news" class="block hover:bg-gray-900 p-3 hover:rounded border-transparent border-2 hover:border-gray-700 text-white hover:text-gray-200">News</a></li>
         </ul>
       </div>
     </header>
