@@ -27,6 +27,6 @@ render(() => (
       <Route path="/teams" component={Teams} />
       <Route path="/news" component={News_pg} />
       <Route path="/auth/register" component={Registration}/>
-      <Route path="*404" element={App} />
+     
   </Router>
 ), document.getElementById("root"));
