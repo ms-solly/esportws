@@ -55,8 +55,8 @@ const MatchesPage = () => {
               ) : (
                 <div class="bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700">
                   <div class="flex justify-between items-center">
-                    <div class="text-red-700 font-bold animate-pulse flex items-center">
-                      <BsWifi2 class="mr-1 animate-ping" />
+                    <div class="text-red-700 font-bold flex items-center">
+                      <BsWifi2 class="mr-1 mb-2 animate-ping" />
                       <span> LIVE</span>
                     </div>
                     <div class="text-gray-400 text-xs">ID: {match.id}</div>
